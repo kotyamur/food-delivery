@@ -1,31 +1,39 @@
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+import { Layout, ListWrapper, ShopLink, ShopList, Title } from './Shop.styled';
+
 const Shop = () => {
   return (
-    <div>
-      <div>Shop</div>
-      <ul>
-        <li>
-          <Link to="mcdonalds">mcdonalds</Link>
-        </li>
-        <li>
-          <Link to="kfc">kfc</Link>
-        </li>
-        <li>
-          <Link to="donermarket">donermarket</Link>
-        </li>
-        <li>
-          <Link to="hesburger">hesburger</Link>
-        </li>
-        <li>
-          <Link to="steakhouse">steakhouse</Link>
-        </li>
-      </ul>
+    <Layout>
+      <ListWrapper>
+        <Title>Shops:</Title>
+        <ShopList>
+          <li>
+            {/* <ShopLink to="mcdonalds">mcdonalds</ShopLink> */}
+            <ShopLink to="/">
+              mcdonalds
+            </ShopLink>
+          </li>
+          <li>
+            <ShopLink to="kfc">kfc</ShopLink>
+          </li>
+          <li>
+            <ShopLink to="donermarket">donermarket</ShopLink>
+          </li>
+          <li>
+            <ShopLink to="hesburger">hesburger</ShopLink>
+          </li>
+          <li>
+            <ShopLink to="steakhouse">steakhouse</ShopLink>
+          </li>
+        </ShopList>
+      </ListWrapper>
+
       <Suspense fallback={<div>Loading...</div>}>
         <Outlet />
       </Suspense>
-    </div>
+    </Layout>
   );
 };
 

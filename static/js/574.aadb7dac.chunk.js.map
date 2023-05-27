@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/574.aadb7dac.chunk.js","mappings":"0JAIA,UAJa,WACX,OAAO,iCACR,C","sources":["pages/Cart/Cart.js"],"sourcesContent":["const Cart = () => {\n  return <div>Cart</div>;\n};\n\nexport default Cart;"],"names":[],"sourceRoot":""}
